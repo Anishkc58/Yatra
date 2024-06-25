@@ -1,0 +1,430 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YATRA garau</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/tour.css' %}">
+
+    <!-- <link rel="stylesheet" href="tour.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+
+<body>
+    <!-- home section starts here  -->
+    <section class="home">
+        <div class="bgimg">
+            <img src="{% static 'images/bg.png' %}" alt="">
+        </div>
+        <div class="home-box">
+           
+            <nav>
+                <div class="logo bars">
+                    <div class="bar">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <h1> YATRA गरौं! </h1>
+                </div>
+                <div class="menu">
+                    <div class="close">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="#">travel packages</a></li>
+                        <li><a href="#">destinatons</a></li>
+                        <li><a href="#footer">contact us</a></li>
+                    </ul>
+                </div>
+                <div class="signup-login">
+
+                    <a href="{% url 'login' %}">login/Register</a>
+                </div>
+            </nav>
+
+            <div class="content">
+
+                <h1>let's embark on your dream journey</h1>
+                <p>discover inspiring destinatons, create unforgettable memories, and travel with confidence - adventure
+                    start adventure starts here...></here>
+                </p>
+
+                <div class="search">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="your jouney begins with a search...">
+                    <button>search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home section ends here  -->
+
+
+    <!-- destinatons section starts here  -->
+    <section class="destinations">
+        <h4 class="label">destinations</h4>
+        <div class="container">
+            <div class="container-box">
+                <h2 class="heading">city escape and nature retreats</h2>
+                <div class="content">
+                    <p>Nepal's City Escape and Nature Retreats combine urban excitement with natural beauty. Explore
+                        Kathmandu and Pokhara for cultural immersion and vibrant experiences. Embark on adventures in
+                        the Annapurna region or Chitwan National Park for serene retreats and thrilling encounters
+                        with wildlife. Nepal offers a perfect harmony of city life
+                        and nature's tranquility for an unforgettable escape.
+                    </p>
+                    <a href="travel.html">explore more <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="box box1">
+                    <a href="abc.html">
+                        <!-- <img src="{% static 'images/ABC.jpeg' %}" alt=""></a> -->
+                        <img src="{% static '../../static/images/ABC.jpeg' %}" alt=""></a>
+                    <div class="text">
+                        <h2>Annapurna Base Camp</h2>
+                    </div>
+                </div>
+                <div class="box box2">
+                    <a href="kathmandu.html">
+                        <img src="{% static 'images/cityescape1.jpg' %}" alt=""> </a>
+                    <div class="text">
+                        <h2>Kathmandu</h2>
+                    </div>
+                </div>
+                <div class="box box3">
+                    <a href="pokhara.html">
+                        <img src="{% static 'images/pookhara.jpg' %}" alt="JANAKPUR">
+                    </a>
+
+                    <div class="text">
+                        <h2>Pokhara</h2>
+                    </div>
+                </div>
+                <div class="box box4">
+                    <a href="luumbini.html">
+                        <img src="{% static 'images/lumbini.jpg' %}" alt="">
+                    </a>
+                    <div class="text">
+                        <h2>Lumbini</h2>
+                    </div>
+
+                </div>
+                <div class="box box5">
+
+                    <a href="janakpur.html">
+                        <img src="{% static 'images/janakpur.jpeg' %}" alt="JANAKPUR">
+                    </a>
+                    <div class="text">
+                        <h2>Janakpur</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- destinatons section ends here  -->
+
+    <!-- featured section starts here  -->
+    <section class="featured">
+        <div class="gallery">
+            <div class="box box1">
+                <div class="first-box">
+                    <h4 class="label">featured offers</h4>
+                    <h2 class="heading">unlock exclusive travel deals</h2>
+                    <p>
+                        OFFER OFFER OFFER!!!!
+                    </p>
+                    <a href="#">show more</a>
+                    <div class="image">
+                        <img src="{% static 'images/plane.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="box box2">
+                <img src="{% static 'images/dwarika.webp' %}" alt="">
+                <div class="content">
+                    <h2>dwarika hotel</h2>
+                    <p>thamel,Kathmandu</p>
+                    <div class="review-and-idr">
+                        <div class="review"><i class="fa fa-star"></i> 4.1 | 853 review</div>
+                        <p>$ 343.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box box3">
+                <img src="{% static 'images/waterfort resort.jpg' %}" alt="">
+                <div class="content">
+                    <h2>waterfort Resoet</h2>
+                    <p>Pudimkot, Pokhara</p>
+                    <div class="review-and-idr">
+                        <div class="review"><i class="fa fa-star"></i> 5 | 853 review</div>
+                        <p>$322.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box box4">
+                <img src="{% static 'images/featured-3.jpg' %}" alt="">
+                <div class="content">
+                    <h2>Vivanta hotel</h2>
+                    <p>Baneshwor, Kathmandu</p>
+                    <div class="review-and-idr">
+                        <div class="review"><i class="fa fa-star"></i> 4.9 | 853 review</div>
+                        <p>$34300.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- featured section ends here  -->
+    <!-- travel section starts here  -->
+    <section class="travel">
+        <div class="container">
+            <div class="box box1">
+                <img src="{% static 'images/planning.png' %}" alt="">
+                <div class="content">
+                    <h4>seamless travel planning</h4>
+                    <p>To ensure seamless travel, YATRA understands the client's needs, creates a balanced itinerary,
+                        and secures all bookings. They arrange essential documents, provide
+                        tailored advice, and offer 24/7 support during the trip. Post-trip, they collect feedback
+                        to enhance future services.
+                </div>
+            </div>
+            <div class="box box2">
+                <img src="{% static 'images/map.png' %}" alt="">
+                <div class="content">
+                    <h4>toilored experiences</h4>
+                    <p>Toilored experiences epitomize personalized attention and satisfaction. It create memorable
+                        interactions
+                        that cater to specific needs, ultimately enhancing customer satisfaction and fostering long-term
+                        relationships. </p>
+                </div>
+            </div>
+            <div class="box box3">
+                <img src="{% static 'images/trust.png' %}" alt="">
+                <div class="content">
+                    <h4>reliable and trustworthy</h4>
+                    <p> YATRA ensure reliability and trustworthiness is paramount. Yatra prioritize reliability, such as
+                        timely departures, clear communication, and efficient problem-solving, and demonstrating
+                        trustworthiness through transparent policies
+                        and secure transactions.
+                </div>
+            </div>
+    </section>
+    <!-- travel section ends here  -->
+
+
+    <!-- feedback section starts here  -->
+    <section class="feedback">
+        <div class="feedbackimg">
+        <img src="{% static 'images/paragliding.jpg' %}" alt="">
+        </div>
+        <div class="container">
+            <h4 class="label">adventure's voices</h4>
+            <h2 class="heading">adventurer's voices</h2>
+            <p class="paragraph">
+                real stories from our sdenturours community
+            </p>
+        </div>
+
+        <div class="voices">
+            <div class="voice box1">
+                <div class="profile">
+                    <img src="{% static 'images/ANISH.jpg' %}" alt="">
+                    <div class="detail">
+                        <li>Anish KC</li>
+                        <li>traveler</li>
+                    </div>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam repellendus ratione nesciunt vel.
+                    Quod sunt illum at reprehenderit illo dicta. Consectetur possimus alias dolore deserunt, commodi
+                    asperiores? Quos, laboriosam beatae.</p>
+            </div>
+            <div class="voice box2">
+                <div class="profile">
+                    <img src="{% static 'images/rishav.jpg' %}" alt="">
+                    <div class="detail">
+                        <li>Rishav Shah</li>
+                        <li>traveler</li>
+                    </div>
+                </div>
+                <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat iusto sunt, ducimus
+                    aliquam laboriosam placeat eligendi, dignissimos facere ratione deserunt. Voluptatum ratione saepe
+                    dolor!"</p>
+            </div>
+            <div class="voice box3">
+                <div class="profile">
+                    <img src="{% static 'images/pakii.jpeg' %}" alt="">
+                    <div class="detail">
+                        <li>Prakriti Sharma</li>
+                        <li>traveler</li>
+                    </div>
+                </div>
+                <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat iusto sunt, ducimus
+                    aliquam laboriosam placeat eligendi, dignissimos facere ratione deserunt. Voluptatum ratione saepe
+                    dolor!"</p>
+            </div>
+            <div class="voice box4">
+                <div class="profile">
+                    <img src="{% static 'images/PRAGYA.jpg' %}" alt="">
+                    <div class="detail">
+                        <li>Pragya Sarad Khadka</li>
+                        <li>traveler</li>
+                    </div>
+                </div>
+                <p>I can't imagine traveling without
+                    [Yatra गरौं! ]! This app has completely revolutionized the way I plan and experience my trips.
+                    From seamless itinerary organization to discovering hidden gems, it's become my ultimate travel
+                    companion.</p>
+            </div>
+            <div class="voice box5">
+                <div class="profile">
+                    <img src="{% static 'images/sis1.jpg' %}" alt="">
+                    <div class="detail">
+                        <li>Sisham Shrestha</li>
+                        <li>traveler</li>
+                    </div>
+                </div>
+                <p>"Nepal, nestled in the Himalayas, enchants with its
+                    majestic peaks and tranquil lakes. Its rich culture, vibrant cities, and warm hospitality offer a
+                    memorable experience. Trekking through its diverse landscapes unveils breathtaking vistas and
+                    ancient traditions, while savoring
+                    its delectable cuisine completes the journey of discovery.
+                    "</p>
+            </div>
+            <div class="voice box6">
+                <div class="profile">
+                    <img src="{% static 'images/jenik.jpg' %}" alt="">
+                    <div class="detail">
+                        <li>Jenik Baral</li>
+                        <li>traveler</li>
+                    </div>
+                </div>
+                <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat iusto sunt, ducimus
+                    aliquam laboriosam placeat eligendi, dignissimos facere ratione deserunt. Voluptatum ratione saepe
+                    dolor!"</p>
+            </div>
+        </div>
+    </section>
+    <!-- feedback section ends here  -->
+
+    <!-- article section starts here  -->
+    <section class="article">
+        <h4 class="label">resources</h4>
+        <h2 class="heading">latest article</h2>
+        <div class="container">
+            <div class="latest-article">
+                <img src="{% static 'images/travell.png' %}" alt="">
+                <p>destination discovery</p>
+                <h3>10 must-visit hidden place in NEPAL</h3>
+                <div class="author">
+                    <img src="{% static 'images/sis1.jpg' %}" alt="">
+                    <p>Sisham Shrestha- 9 min read</p>
+                </div>
+            </div>
+            <div class="more-article">
+                <div class="box box1">
+                    <div class="image">
+                        <img src="{% static 'images/family.jpg' %}" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>Traveling with kids: tips for stress-free family adventures</h3>
+                        <li>family travel - 7 min read</li>
+                    </div>
+                </div>
+                <div class="box box2">
+                    <div class="image">
+                        <img src="{% static 'images/food-article.jpg' %}" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>culinary adventure: exploring nepal cuisines on your travels</h3>
+                        <li>food and travel - 5 min</li>
+                    </div>
+                </div>
+                <div class="box box3">
+                    <div class="image">
+                        <img src="{% static 'images/budget-travel.jpg' %}" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>traveling on budget: Customizable Packages</h3>
+                        <li>budget travel - 7 min read</li>
+                    </div>
+                </div>
+                <div class="box box4">
+                    <div class="image">
+                        <img src="{% static 'images/tips.jpg' %}" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>traveling solo: tips for stress-free travlling</h3>
+                        <li>travel tips - 7 min read</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- article section ends here  -->
+
+    <!-- footer section starts here  -->
+    <footer>
+        <section class="footer">
+            <div class="container">
+                <div class="detail">
+                    <h3>YATRA गरौं!</h3>
+                    <p>Yatra unveil Himalayan treasures, from Everest's peaks to Kathmandu's temples.
+                        They guide adventurers through ancient cultures and breathtaking landscapes.
+                        With each click, they promise unforgettable journeys in the land of the Himalayas.</p>
+                    <h5>get in touch</h5>
+                    <a href="#">yatra37@gmail.com</a>
+                    <div class="social">
+                        <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                        <a href="#"><i class="fa fa-facebook-square"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square"></i></a>
+                    </div>
+                </div>
+                <div class="about-us">
+                    <h4>about us</h4>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our term</a></li>
+
+                </div>
+                <div class="about-us">
+                    <h4>help</h4>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">booking guide</a></li>
+                    <li><a href="#">contact us</a></li>
+
+                </div>
+                <div class="about-us">
+                    <h4>Resources</h4>
+                    <li><a href="#">newsletter</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">gallery</li>
+                    <li><a href="#">offers</a></li>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <div>
+                    &copy;2024 - YATRA गरौं!, inc, all rights reserved
+                </div>
+                <div>
+                    <a href="#">term & conditions</a>
+                    <a href="#">privacy policy</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- footer section ends here  -->
+    <script src=" {% static 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js' %} "
+        integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js' %}"
+        integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'js/travell.js' %}" ></script>
+</body>
+
+</html>
