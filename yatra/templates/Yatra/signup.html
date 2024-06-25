@@ -13,34 +13,61 @@
   <div class="wrapper">
     <form method="POST" action="{% url 'signup' %}">
       {% csrf_token %}
-      {{ form.as_p }}
-      <!--
+      <!-- {{form.username.label}}
+      {{form.username}}
+
+      {{form.email.label}}
+      {{form.email}}
+
+      {{form.password1.label}}
+      {{form.password1.}}
+
+      {{form.password2.label}}
+      {{form.password2}} -->
+
+
+
+
+
+
+
+      
       <h2 align="center"> Create an account</h2>
       <h3 align="center"> Connect with yatra today!!</h3>
 
       <div class="input-box">
-        <input type="text" name="username" placeholder="Enter your Username" required>
+        <p>Username</p>
+      {{form.username}}
+        <!-- <input type="text" name="username" placeholder="Enter your Username" required> -->
         <i class='bx bxs-user'></i>
       </div>
       <div class="input-box">
-        <input type="email" name="email" placeholder="Enter your email" required>
+        <p>email</p>
+      {{form.email}}
+        <!-- <input type="email" name="email" placeholder="Enter your email" required> -->
         <i class='bx bxs-user'></i>
       </div>
       <div class="input-box">
-        <input type="number" name="phone_number" placeholder="Enter your phone number" required>
+        <p>Phone number</p>
+        {{form.phone_number}}
+        <!-- <input type="number" name="phone_number" placeholder="Enter your phone number" required> -->
         <i class='bx bxs-lock-alt' ></i>
       </div>
       <div class="input-box">
-        <input type="password" name="password1" placeholder="Enter your password" required>
+        <p>Password</p>
+      {{form.password1}}
+        <!-- <input type="password" name="password1" placeholder="Enter your password" required> -->
         <i class='bx bxs-lock-alt' ></i>
       </div>
       <div class="input-box">
-        <input type="password" name="password2" placeholder="Confirm password" required>
+        <p>Confirm Password</p>
+      {{form.password2}}
+        <!-- <input type="password" name="password2" placeholder="Confirm password" required> -->
         <i class='bx bxs-lock-alt' ></i>
       </div>
-      
-      
-      -->
+      {{form.errors}}
+      <br>
+     
       <button type="submit" class="btn">Sign up</button>
       <div class="register-link">
         <p>Already have an account <a href="{% url 'login' %}">login</a></p>

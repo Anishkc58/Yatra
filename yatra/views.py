@@ -6,6 +6,8 @@ from django.contrib.auth.models import User
 from .forms import CustomUserCreationForm, BookingForm
 from .models import Destination, Booking
 
+from django.contrib import messages
+
 
 class CustomUserCreationForm(CustomUserCreationForm):
     email = forms.EmailField(required=True)
@@ -27,9 +29,11 @@ def signup_view(request):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            print(f"User {user.username} created successfully.")
+            user = form.cleaned_data.get('username')
+            messages.success(request, 'Account was created for ' + user)
+            # print(f"User {user.username} created successfully.")
             login(request, user)
-            return redirect('home')
+            return redirect('login')
         else:
             print(form.errors)
     else:
