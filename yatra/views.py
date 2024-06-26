@@ -5,6 +5,7 @@ from django import forms
 from django.contrib.auth.models import User
 from .forms import CustomUserCreationForm, BookingForm
 from .models import Destination, Booking
+from django.contrib.auth import authenticate, login, logout
 
 from django.contrib import messages
 
@@ -28,28 +29,42 @@ def signup_view(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save()
+            form.save()
+
+            # user = form.save()
             user = form.cleaned_data.get('username')
             messages.success(request, 'Account was created for ' + user)
             # print(f"User {user.username} created successfully.")
-            login(request, user)
+            # login(request, user)
             return redirect('login')
         else:
             print(form.errors)
+    
     else:
         form = CustomUserCreationForm()
+    context = {'form':form}
     return render(request, 'signup.html', {'form': form})
 
 def login_view(request):
     if request.method == 'POST':
+        username= request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            redirect('home')
+
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
             user = form.get_user()
-            print(f"Welcome back {user.username}.")
-            login(request, user)
-            return redirect('home')
+            # print(f"Welcome back {user.username}.")
+            # login(request, user)
+            return redirect('tour')
     else:
         form = AuthenticationForm()
+    context = {'form':form}
     return render(request, 'login.html', {'form': form})
 
 def tour_view(request):
