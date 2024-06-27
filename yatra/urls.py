@@ -6,7 +6,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/', signup_view, name='signup'),
     path('login/', login_view, name='login'),
-    path('', tour_view, name='home'),
+    path('', tour_view, name='tour'),
     path('book/', booking_view, name='book'),
     path('booking_confirmation/', booking_confirmation_view, name='booking_confirmation'),
 ]

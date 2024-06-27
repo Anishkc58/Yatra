@@ -54,14 +54,18 @@ def login_view(request):
 
         if user is not None:
             login(request, user)
-            redirect('home')
+            return redirect('tour')
+        else:
+            messages.info(request, 'Username or Password is incorrect')
+            context = {}
+            return render(request, 'login.html', context)
 
         form = AuthenticationForm(request, data=request.POST)
-        if form.is_valid():
-            user = form.get_user()
-            # print(f"Welcome back {user.username}.")
-            # login(request, user)
-            return redirect('tour')
+        # if form.is_valid():
+        #     user = form.get_user()
+        #     # print(f"Welcome back {user.username}.")
+        #     # login(request, user)
+        #     return redirect('tour')
     else:
         form = AuthenticationForm()
     context = {'form':form}
