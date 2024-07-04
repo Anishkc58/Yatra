@@ -9,6 +9,8 @@ from django.contrib.auth import authenticate, login, logout
 
 from django.contrib import messages
 
+from django.contrib.auth.decorators import login_required
+
 
 class CustomUserCreationForm(CustomUserCreationForm):
     email = forms.EmailField(required=True)
@@ -54,7 +56,7 @@ def login_view(request):
 
         if user is not None:
             login(request, user)
-            return redirect('tour')
+            return redirect('postlogin')
         else:
             messages.info(request, 'Username or Password is incorrect')
             context = {}
@@ -70,6 +72,11 @@ def login_view(request):
         form = AuthenticationForm()
     context = {'form':form}
     return render(request, 'login.html', {'form': form})
+
+
+def logoutUser(request):
+    logout(request)
+    return redirect('login')
 
 def tour_view(request):
     destinations = Destination.objects.all()
@@ -93,3 +100,7 @@ def booking_confirmation_view(request):
 
 def travel_view(request):
      return render(request, 'travel.html')
+
+@login_required(login_url='login')
+def postlogin_view(request):
+     return render(request, 'postlogin.html')

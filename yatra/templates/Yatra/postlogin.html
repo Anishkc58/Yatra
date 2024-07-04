@@ -40,10 +40,10 @@
                         <li><a href="#footer">contact us</a></li>
                     </ul>
                 </div>
-                <div class="signup-login">
+                
+                <span>Hello, {{ request.user}} </span>
+                <span><a href="{% url 'logout' %}">Logout</a></span>
 
-                    <a href="{% url 'login' %}">login/Register</a>
-                </div>
             </nav>
 
             <div class="content">
